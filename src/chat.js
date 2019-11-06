@@ -12,6 +12,8 @@ export const sendMessage = (text, sender = 'user') => ({
 const messageMiddleware = () => next => action => {
   next(action)
 
+  console.log('next action', action)
+
   if (action.type === ON_MESSAGE) {
     const {text} = action.payload;
     client.textRequest(text).then(onSuccess)
@@ -23,7 +25,7 @@ const messageMiddleware = () => next => action => {
   }
 }
 
-const initState = [{text: 'hey'}];
+const initState = [{text: 'What can you tell me about OCA?'}];
 const messageReducer = (state = initState, action) => {
   switch(action.type) {
     case ON_MESSAGE:
