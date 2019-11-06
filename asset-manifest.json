@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/react-dialogflow/static/js/main.4489f081.chunk.js",
+    "main.js.map": "/react-dialogflow/static/js/main.4489f081.chunk.js.map",
+    "runtime-main.js": "/react-dialogflow/static/js/runtime-main.81706958.js",
+    "runtime-main.js.map": "/react-dialogflow/static/js/runtime-main.81706958.js.map",
+    "static/css/2.ab29d089.chunk.css": "/react-dialogflow/static/css/2.ab29d089.chunk.css",
+    "static/js/2.0d8821bc.chunk.js": "/react-dialogflow/static/js/2.0d8821bc.chunk.js",
+    "static/js/2.0d8821bc.chunk.js.map": "/react-dialogflow/static/js/2.0d8821bc.chunk.js.map",
+    "index.html": "/react-dialogflow/index.html",
+    "precache-manifest.8e9c6f6de5ec14795cd04e5b023c61e3.js": "/react-dialogflow/precache-manifest.8e9c6f6de5ec14795cd04e5b023c61e3.js",
+    "service-worker.js": "/react-dialogflow/service-worker.js",
+    "static/css/2.ab29d089.chunk.css.map": "/react-dialogflow/static/css/2.ab29d089.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81706958.js",
+    "static/css/2.ab29d089.chunk.css",
+    "static/js/2.0d8821bc.chunk.js",
+    "static/js/main.4489f081.chunk.js"
+  ]
+}
