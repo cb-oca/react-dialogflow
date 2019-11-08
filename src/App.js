@@ -14,7 +14,7 @@ class App extends Component {
       <div className={styles.container}>
         <h1>OCA Chat!</h1>
         <Questions />
-        <ul className={styles.chatwindow}>
+        <ul className={styles.chat_window}>
           {feed.map((entry, index) => <li className={(entry.sender === 'bot' ? styles.bot : styles.user)} key={index}>
             <span>{entry.text}</span>
           </li>)}

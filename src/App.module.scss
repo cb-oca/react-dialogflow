@@ -3,10 +3,12 @@
   background: white;
 }
 .chat_window {
+  height: 15em;
   margin: 1em;
   padding: 1.5em;
   border-radius: 32px;
-  background: lightcyan;
+  background: lighten(lightgray, 15%);
+  overflow: auto;
 }
 
 .user,
@@ -17,20 +19,49 @@
   list-style: none;
 
   span {
+    position: relative;
     width: auto;
     padding: 1em 2.25em;
     background: white;
     border-radius: 30px;
     box-shadow: 3px 3px 11px -5px rgba(171, 171, 171, 0.75);
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: -40px;
+      width: 35px;
+      height: 35px;
+      content: '';
+      padding: 5px 7px;
+      background: gray;
+      border-radius: 50px;
+    }
   }
 }
 
   .user {
+
     span {
       float: right;
+
+      &::before {
+        content: '\1F464';
+        background: rgb(189,195,199);
+        background: linear-gradient(135deg, rgba(189,195,199,.75) 70%, rgba(44,62,80,.75) 100%); 
+      }
     }
   }
 
   .bot {
 
+    span {
+      margin-left: 50px;
+
+      &::before {
+        content: '\1f916';
+        background: rgb(253,29,29);
+        background: linear-gradient(117deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+      }
+    }
   }
