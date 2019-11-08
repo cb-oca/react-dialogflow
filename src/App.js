@@ -5,6 +5,7 @@ import {sendMessage} from './chat';
 import styles from './App.module.scss';
 
 class App extends Component {
+
   render() {
     const {questions, feed, sendMessage} = this.props;
 
