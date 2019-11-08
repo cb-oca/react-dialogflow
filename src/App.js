@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {sendMessage} from './chat';
+import styles from './App.module.scss';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
     console.log(feed);
 
     return(
-      <div>
+      <div className={styles.container}>
         <h1>OCA Chat!</h1>
         <ul>
           {feed.map((entry, index) => <li className={(entry.sender === 'bot' ? 'bot' : 'user')} key={index}>{entry.text}</li>)}
