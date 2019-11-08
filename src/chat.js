@@ -17,6 +17,7 @@ const messageMiddleware = () => next => action => {
   if (action.type === ON_MESSAGE) {
     const {text} = action.payload;
     client.textRequest(text).then(onSuccess)
+
     function onSuccess(response) {
       console.log('Msg Response', response.result.fulfillment.speech);
 
@@ -25,7 +26,8 @@ const messageMiddleware = () => next => action => {
   }
 }
 
-const initState = [{text: 'What can you tell me about OCA?'}];
+// const initState = [{text: 'What can you tell me about OCA?'}];
+const initState = [];
 const messageReducer = (state = initState, action) => {
   switch(action.type) {
     case ON_MESSAGE:
