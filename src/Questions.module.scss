@@ -1,0 +1,27 @@
+.questions {
+  margin: 1em;
+}
+.questions__list {
+  list-style: none;
+  margin: 5px;
+  padding: 2px;
+
+  &_item {
+    position: relative;
+    padding: 5px 30px 15px;
+    border-bottom: 1px solid lightgrey;
+
+    &::before {
+      position: absolute;
+      content: '\201C';
+      top: -15px;
+      left: 14px;
+      font-size: 39px;
+      opacity: .5;
+    }
+  }
+}
+
+// .questions__list_item {
+//   color: red;
+// }

@@ -1,3 +1,36 @@
 .container {
+  margin: 1em;
   background: white;
 }
+.chat_window {
+  margin: 1em;
+  padding: 1.5em;
+  border-radius: 32px;
+  background: lightcyan;
+}
+
+.user,
+.bot {
+  width: 100%;
+  height: 3em;
+  margin: 2em 0;
+  list-style: none;
+
+  span {
+    width: auto;
+    padding: 1em 2.25em;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 3px 3px 11px -5px rgba(171, 171, 171, 0.75);
+  }
+}
+
+  .user {
+    span {
+      float: right;
+    }
+  }
+
+  .bot {
+
+  }

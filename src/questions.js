@@ -8,14 +8,14 @@ class Questions extends React.Component {
     return(
       <div className={styles.questions}>
         <h6>Choose a Question</h6>
-        <ul>
-          <li>What is the OCA's background?</li>
-          <li>Give me some background to OCA?</li>
-          <li>What can you tell me about OCA?</li>
-          <li>What is the Open College of the Arts?</li>
-          <li>What is OCA?</li>
-          <li>Tell me about the Open College of the Arts</li>
-          <li>Tell me about OCA</li>
+        <ul className={styles.questions__list}>
+          <li className={styles.questions__list_item}>What is the OCA's background?</li>
+          <li className={styles.questions__list_item}>Give me some background to OCA?</li>
+          <li className={styles.questions__list_item}>What can you tell me about OCA?</li>
+          <li className={styles.questions__list_item}>What is the Open College of the Arts?</li>
+          <li className={styles.questions__list_item}>What is OCA?</li>
+          <li className={styles.questions__list_item}>Tell me about the Open College of the Arts</li>
+          <li className={styles.questions__list_item}>Tell me about OCA</li>
         </ul>
       </div>
     )
