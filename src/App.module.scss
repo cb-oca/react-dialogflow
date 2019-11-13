@@ -1,3 +1,35 @@
+.bounceInLeft {
+  animation-name: bounceInLeft;
+  animation-timing-function: ease;
+}
+@keyframes bounceInLeft {
+  0%   { transform: scale(1,1)    translateX(0); }
+  10%  { transform: scale(1.1,.9) translateX(0); }
+  30%  { transform: scale(.9,1.1) translateX(-33px); }
+  50%  { transform: scale(1,1)    translateX(0); }
+  100% { transform: scale(1,1)    translateX(0); }
+}
+.bounceInRight {
+  animation-name: bounceInRight;
+  animation-timing-function: ease;
+}
+@keyframes bounceInRight {
+  0%   { transform: scale(1,1)    translateX(0); }
+  10%  { transform: scale(1.1,.9) translateX(0); }
+  30%  { transform: scale(.9,1.1) translateX(33px); }
+  50%  { transform: scale(1,1)    translateX(0); }
+  100% { transform: scale(1,1)    translateX(0); }
+}
+.expand {
+  animation-name: expand;
+  animation-timing-function: ease-in-out;
+}
+@keyframes expand {
+  0%   { transform: scaleX(0)  }
+  50%  { transform: scaleX(0.33) }
+  100% { transform: scaleX(1)  }
+}
+
 .container {
   margin: 1em;
   background: white;
@@ -21,6 +53,8 @@
   height: auto;
   margin: 0 0;
   list-style: none;
+  // animation: expand 0.5s ease-in-out;
+  // animation-delay: 1.5s;
 
   .message {
     max-width: 55em;
@@ -28,61 +62,95 @@
     background: white;
     border-radius: 30px;
     box-shadow: 3px 3px 11px -5px rgba(171, 171, 171, 0.75);
+
+    // animation: bounceInLeft 1s ease-in-out;
+    // animation-delay: 1.5s;
   }
 
   span {
     position: relative;
     width: auto;
-    min-width: 100px;
+    min-width: 40px;
 
-    &::before {
+  }
+}
+
+.user {
+  margin-right: 35px;
+  clear: left;
+
+  .message {
+    float: right;
+    text-align: right;
+
+    animation: bounceInLeft 1s ease-in-out;
+    // animation-delay: 1.5s;
+  }
+
+  span {
+    float: right;
+
+    // &::before {
+    //   content: '\1F464';
+    //   background: rgb(255, 255, 255);
+    //   background: linear-gradient(117deg, rgba(255, 255, 255, 0.75) 0%, rgba(193, 209, 226, 0.75) 100%); 
+    // }
+    &::after {
       position: absolute;
       top: -5px;
-      left: -70px;
+      left: 70px;
       width: 35px;
       height: 35px;
-      content: '';
+      // content: '';
       padding: 5px 7px;
-      background: gray;
+      content: '\1F464';
+      background: rgb(255, 255, 255);
+      background: linear-gradient(117deg, rgba(255, 255, 255, 0.75) 0%, rgba(193, 209, 226, 0.75) 100%); 
       border-radius: 50px;
     }
   }
 }
 
-  .user {
-    margin-right: 10px;
-    clear: left;
+.bot {
+  margin-left: 35px;
+  clear: right;
 
-    .message {
-      float: right;
-    }
+  .message {
+    float: left;
+    text-align: left;
 
-    span {
-      float: right;
-
-      &::before {
-        content: '\1F464';
-        background: rgb(255, 255, 255);
-        background: linear-gradient(117deg, rgba(255, 255, 255, 0.75) 0%, rgba(193, 209, 226, 0.75) 100%); 
-      }
-    }
+    animation: bounceInRight 1s ease-in-out;
+    // animation-delay: 1.5s;
   }
 
-  .bot {
-    margin-left: 35px;
-    clear: right;
+  span {
+    // margin-left: 50px;
 
-    .message {
-      float: left;
+    &::before {
+      position: absolute;
+      top: -5px;
+      left: -60px;
+      width: 35px;
+      height: 35px;
+      // content: '';
+      padding: 5px 7px;
+      content: '\1f916';
+      background: rgb(253,29,29);
+      background: linear-gradient(117deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+      border-radius: 50px;
     }
 
-    span {
-      // margin-left: 50px;
-
-      &::before {
-        content: '\1f916';
-        background: rgb(253,29,29);
-        background: linear-gradient(117deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
-      }
-    }
+    // &::before {
+    //   content: '\1f916';
+    //   background: rgb(253,29,29);
+    //   background: linear-gradient(117deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+    // }
   }
+}
+
+.text_input {
+  display: block;
+  width: 93% !important;
+  margin: auto;
+  border-radius: 18px !important;
+}

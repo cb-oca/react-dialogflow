@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { animateScroll } from "react-scroll";
+import { animateScroll } from 'react-scroll';
+import classNames from 'classnames/bind';
 import Questions from './questions';
 import {sendMessage} from './chat';
 import styles from './App.module.scss';
+
+let cx = classNames.bind(styles);
 
 class App extends Component {
   // https://codepen.io/drumilpatel/pen/aEbNMK
@@ -12,8 +15,11 @@ class App extends Component {
     this.scrollToBottom();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     this.scrollToBottom();
+
+    console.log('update prevProps: ', prevProps);
+    console.log('update Props: ', this.props);
   }
 
   scrollToBottom() {
@@ -28,7 +34,9 @@ class App extends Component {
   render() {
     const {questions, feed, sendMessage} = this.props;
 
-    console.log(questions);
+    // console.log(questions);
+
+    console.log('Props: ', feed);
 
     return(
       <div className={styles.container}>
@@ -39,7 +47,7 @@ class App extends Component {
             <div className={styles.message}><span>{entry.text}</span></div>
           </li>)}
         </ul>
-        <input type='text' onKeyDown={(e) => e.keyCode === 13 ? sendMessage(e.target.value) : null} />
+        <input className={styles.text_input} type='text' onKeyDown={(e) => e.keyCode === 13 ? sendMessage(e.target.value) : null} />
       </div>
     )
   }
