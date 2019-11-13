@@ -5,7 +5,7 @@
 @keyframes bounceInLeft {
   0%   { transform: scale(1,1)    translateX(0); }
   10%  { transform: scale(1.1,.9) translateX(0); }
-  30%  { transform: scale(.9,1.1) translateX(-33px); }
+  30%  { transform: scale(.9,1.1) translateX(-25px); }
   50%  { transform: scale(1,1)    translateX(0); }
   100% { transform: scale(1,1)    translateX(0); }
 }
@@ -16,7 +16,7 @@
 @keyframes bounceInRight {
   0%   { transform: scale(1,1)    translateX(0); }
   10%  { transform: scale(1.1,.9) translateX(0); }
-  30%  { transform: scale(.9,1.1) translateX(33px); }
+  30%  { transform: scale(.9,1.1) translateX(25px); }
   50%  { transform: scale(1,1)    translateX(0); }
   100% { transform: scale(1,1)    translateX(0); }
 }
@@ -58,6 +58,7 @@
 
   .message {
     max-width: 55em;
+    margin-bottom: 2em;
     padding: 11px 22px;
     background: white;
     border-radius: 30px;
@@ -98,7 +99,7 @@
     &::after {
       position: absolute;
       top: -5px;
-      left: 70px;
+      right: -60px;
       width: 35px;
       height: 35px;
       // content: '';
