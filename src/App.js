@@ -36,7 +36,7 @@ class App extends Component {
         <Questions />
         <ul id="chat_window" className={styles.chat_window}>
           {feed.map((entry, index) => <li className={(entry.sender === 'bot' ? styles.bot : styles.user)} key={index}>
-            <span>{entry.text}</span>
+            <div className={styles.message}><span>{entry.text}</span></div>
           </li>)}
         </ul>
         <input type='text' onKeyDown={(e) => e.keyCode === 13 ? sendMessage(e.target.value) : null} />
