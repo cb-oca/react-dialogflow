@@ -8,7 +8,7 @@
   padding: 1.5em;
   border-radius: 32px;
   background: lighten(lightgray, 15%);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .user,
@@ -47,8 +47,8 @@
 
       &::before {
         content: '\1F464';
-        background: rgb(189,195,199);
-        background: linear-gradient(135deg, rgba(189,195,199,.75) 70%, rgba(44,62,80,.75) 100%); 
+        background: rgb(255, 255, 255);
+        background: linear-gradient(117deg, rgba(255, 255, 255, 0.75) 0%, rgba(193, 209, 226, 0.75) 100%); 
       }
     }
   }
