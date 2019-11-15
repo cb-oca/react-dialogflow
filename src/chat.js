@@ -3,6 +3,8 @@ import {applyMiddleware, createStore} from 'redux';
 const accessToken = 'b9410acf93b3497c9691627588fd6921';
 const client = new ApiAiClient({accessToken});
 
+const promise = client.eventRequest("EVENT_NAME", {});
+
 const ON_MESSAGE = 'ON_MESSAGE';
 export const sendMessage = (text, sender = 'user') => ({
   type: ON_MESSAGE,
@@ -22,6 +24,8 @@ const messageMiddleware = () => next => action => {
       console.log('Msg Response', response.result.fulfillment.speech);
 
       next(sendMessage(response.result.fulfillment.speech, 'bot'));
+
+      console.log('promise: ', promise);
     }
   }
 }
